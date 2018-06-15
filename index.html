@@ -1,0 +1,704 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
+
+<style>
+body{
+background-color:#000000;
+background-image: url('') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+::-webkit-scrollbar {width: 5px; height: 5px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #666666;}
+
+#cbox1 {
+position:absolute;
+width:20%;
+height:40%;
+top:20%;
+left:35%;
+background-image: url('https://i.imgur.com/Ay4w45v.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+#cbox2 {
+position:absolute;
+width:15%;
+height:30%;
+top:61%;
+left:40%;
+background-image: url('https://i.imgur.com/gkXVP5l.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+#cbox3 {
+position:absolute;
+width:10%;
+height:20%;
+top:39.7%;
+left:29.3%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+#cbox4 {
+position:absolute;
+width:13%;
+height:26%;
+top:20%;
+left:45.7%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+#cbox5 {
+position:absolute;
+width:8%;
+height:16%;
+top:20%;
+left:55.3%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+
+.bigtabs1 {
+display:block;
+line-height:25;
+width:100%;
+height:100%;
+opacity:0;
+text-align:center;
+color:#ffffff;
+font-size:3vh;
+font-family: 'Krona One', sans-serif;
+letter-spacing:5px;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.bigtabs1:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.bigtabs2 {
+display:block;
+line-height:2.5;
+width:100%;
+height:100%;
+opacity:0;
+text-align:center;
+color:#ffffff;
+font-size:100%;
+font-family: 'Krona One', sans-serif;
+letter-spacing:5px;
+text-transform:uppercase;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.bigtabs2:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4,#tab5,#tab6,#tab7,#tab8,#tab9 {
+display: none;
+}
+
+#content {
+position:absolute;
+width:100%;
+height:100%;
+top:0%;
+left:0%;
+background-color:#c0c0c0;
+}
+
+img {
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+img:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox1 {
+position:absolute;
+border:2px solid #000000;
+width:20%;
+height:50%;
+left:25%;
+top:25%;
+background-image: url('https://i.imgur.com/Ya7yAFB.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox1:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#subtitle1 {
+position:absolute;
+border:2px solid #000000;
+background-color:#ffffff;
+line-height:1%;
+padding:2%;
+width:20%;
+height:0%;
+left:46%;
+top:25%;
+letter-spacing:3px;
+text-align:center;
+color:#666666;
+font-size:3vh;
+font-family: 'Krona One', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#subtitle1:hover {
+color:#000000;
+-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#textbox1 {
+position:absolute; 
+overflow:auto;
+padding:2%;
+border:2px solid #000000;
+background-color:#ffffff;
+width:20%;
+height:19%;
+left:46%;
+top:35.5%;
+font-size:2vh;
+color:#000000;
+font-family: 'Teko', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#textbox1:hover {
+-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1 {
+position:absolute;
+border:2px solid #000000;
+width:5%;
+height:10%;
+left:46%;
+top:65%;
+background-image: url('https://i.imgur.com/5pk9GfW.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+border:2px solid #000000;
+width:5%;
+height:10%;
+left:55.5%;
+top:65%;
+background-image: url('https://i.imgur.com/BKyU7H3.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:top !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+border:2px solid #000000;
+width:5%;
+height:10%;
+left:65%;
+top:65%;
+background-image: url('https://i.imgur.com/0Rp8WMX.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:top !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#star1 {
+position:absolute;
+width:4%;
+height:8%;
+left:51.5%;
+top:66%;
+background-image: url('https://i.imgur.com/3NmioYy.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+#star2 {
+position:absolute;
+width:4%;
+height:8%;
+left:61%;
+top:66%;
+background-image: url('https://i.imgur.com/3NmioYy.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:100% 100%;
+}
+
+.tabs {
+display:block;
+opacity:0;
+width:100%;
+height:100%;
+text-align:center;
+color:#ffffff;
+font-family: 'Krona One', sans-serif;
+text-transform:uppercase;
+line-height:18;
+font-size:1vh;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox2 {
+position:absolute;
+border:2px solid #ffffff;
+width:20%;
+height:50%;
+left:25%;
+top:25%;
+background-image: url('https://i.imgur.com/Oaq1u5N.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:top !important; 
+background-size:100%;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#picbox2:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#subtitle2 {
+position:absolute;
+border:2px solid #ffffff;
+background-color:#000000;
+line-height:1%;
+padding:2%;
+width:20%;
+height:0%;
+left:46%;
+top:25%;
+letter-spacing:3px;
+text-align:center;
+color:#666666;
+font-size:3vh;
+font-family: 'Krona One', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#subtitle2:hover {
+color:#ffffff;
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#textbox2 {
+position:absolute; 
+overflow:auto;
+padding:2%;
+border:2px solid #ffffff;
+background-color:#000000;
+width:20%;
+height:19%;
+left:46%;
+top:35.5%;
+font-size:2vh;
+color:#ffffff;
+font-family: 'Teko', sans-serif;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#textbox2:hover {
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+border:2px solid #ffffff;
+width:5%;
+height:10%;
+left:46%;
+top:65%;
+background-image: url('https://i.imgur.com/3wt9l8I.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:top !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5 {
+position:absolute;
+border:2px solid #ffffff;
+width:5%;
+height:10%;
+left:55.5%;
+top:65%;
+background-image: url('https://i.imgur.com/DnaV0OC.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:top !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox5:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6 {
+position:absolute;
+border:2px solid #ffffff;
+width:5%;
+height:10%;
+left:65%;
+top:65%;
+background-image: url('https://i.imgur.com/MWUdF9T.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox6:hover {
+-webkit-filter: grayscale(0%);
+filter: grayscale(0%);
+-webkit-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 12px 2px rgba(0,0,0,0.75);
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+h1 {
+color:#ffffff;
+border-left: 6px solid #555555;
+background-color: #888888;
+font-family: 'Krona One', sans-serif;
+text-transform:uppercase;
+letter-spacing:5px;
+font-size:1vh;
+}
+
+b {
+color:#666666;
+font-family: 'Teko', sans-serif;
+text-transform:uppercase;
+font-size:2vh;
+}
+
+i {
+color:#ff0000;
+}
+
+a {
+color:#999999;
+}
+</style>
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur817.cur), progress !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Krona+One|Teko" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation1(id) {document.getElementById('textbox1').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation2(id) {document.getElementById('picbox1').innerHTML=document.getElementById(id).innerHTML}</script>
+<script>function changeNavigation3(id) {document.getElementById('textbox2').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="content">
+<div id="cbox3">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/EbkWrFb.png"/>
+</div>
+<div id="cbox4">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/ygD3kTZ.png"/>
+</div>
+<div id="cbox5">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/kXqmsBB.png"/>
+</div>
+<div id="cbox1">
+<span class="bigtabs1" onClick="changeNavigation ('tab1')">Natalie</span>
+</div>
+<div id="cbox2">
+<span class="bigtabs2" onClick="changeNavigation ('tab2')">Cosmic</span>
+</div>
+</div>
+
+<div id="tab1">
+<div id="picbox1">
+<img style="height:100%;width:100%;" src="https://i.imgur.com/XwYhS7m.png"/>
+</div>
+<div id="subtitle1">
+☆ ✭ Rich Bitch ✭ ☆
+</div>
+<div id="textbox1">
+<h1>Basic Information</h1>
+<b>Name:</b> Natalie Williams<br>
+<b>Nickname:</b> Duppy<br>
+<b>Villain Alias:</b> Cosmic<br>
+<b>Age:</b> Twenty Three<br>
+<b>Birthdate:</b> December 6th<br>
+<b>Gender:</b> Female<br>
+<b>Sexuality:</b> Heterosexual<br>
+<b>Species:</b> Human<br>
+<b>Race:</b> British<br>
+<b>Talents:</b> Gravity Manipulation<br>
+<b>Height:</b> 5'7"<br>
+<b>Weight:</b> 130 lbs.
+</div>
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation1 ('tab4');changeNavigation2 ('tab5');">Details</span>
+</div>
+<div id="star1">
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation1 ('tab6');changeNavigation2 ('tab7');">History</span>
+</div>
+<div id="star2">
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab3')">Back</span>
+</div>
+<embed style="height: 0%; width: 0%;"src="Natalie.mp3" autostart="true" loop="true">
+</div>
+
+<div id="tab4">
+<h1>Detailed Information</h1>
+<b>Appearance</b><br>
+<br><br>
+<b>Personality</b><br>
+</div>
+<div id="tab5">
+<img style="width:99.9%;height:100%;" src="https://i.imgur.com/rniW1q8.png"/>
+</div>
+
+<div id="tab6">
+<h1>Backstory</h1>
+</div>
+<div id="tab7">
+<img style="width:99.9%;height:100%;" src="https://i.imgur.com/tKECnoD.png"/>
+</div>
+
+<div id="tab3">
+<div id="cbox3">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/EbkWrFb.png"/>
+</div>
+<div id="cbox4">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/ygD3kTZ.png"/>
+</div>
+<div id="cbox5">
+<img style="width:100%;height:100%;" src="https://i.imgur.com/kXqmsBB.png"/>
+</div>
+<div id="cbox1">
+<span class="bigtabs1" onClick="changeNavigation ('tab1')">Natalie</span>
+</div>
+<div id="cbox2">
+<span class="bigtabs2" onClick="changeNavigation ('tab2')">Cosmic</span>
+</div>
+</div>
+
+<div id="tab2">
+<div id="picbox2">
+<img style="height:100%;width:100%;" src="https://i.imgur.com/t0XdWlt.png"/>
+</div>
+<div id="subtitle2">
+Cosmic Anomaly
+</div>
+<div id="textbox2">
+<h1>Core Ability</h1>
+<br><br>
+<h1>Skills</h1>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation3 ('tab8');">Inventory</span>
+</div>
+<div id="star1">
+</div>
+<div id="tabbox5">
+<span class="tabs" onClick="changeNavigation3 ('tab9');">Details</span>
+</div>
+<div id="star2">
+</div>
+<div id="tabbox6">
+<span class="tabs" onClick="changeNavigation ('tab3')">Back</span>
+</div>
+<embed style="height: 0%; width: 0%;"src="Cosmic.mp3" autostart="true" loop="true">
+</div>
+
+<div id="tab8">
+<h1>Weapons & Gear</h1>
+</div>
+
+<div id="tab9">
+<h1>Appearance</h1>
+<br><br>
+<h1>Personality</h1>
+</div>
